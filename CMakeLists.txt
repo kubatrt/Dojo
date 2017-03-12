@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Dojo)
+project(Dojo) 
 
-subdirectory(AddressBook)
+add_subdirectory(AddressBook)
