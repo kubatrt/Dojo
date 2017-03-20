@@ -14,4 +14,4 @@ include_directories(${PROJECT_NAME} ${GTEST_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} ${SOURCE})
 
-target_link_libraries(${PROJECT_NAME} gtest gtest_main)
+target_link_libraries(${PROJECT_NAME} gtest gtest_main pthread)

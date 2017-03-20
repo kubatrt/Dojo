@@ -20,10 +20,12 @@ class AddressBook
 
         std::size_t size();
         void addContact(std::string aName, std::string aSurename, std::string aEmail, std::string aPesel);
-        //void rmContact()
-        //void findContact()
+        void addContact(const Contact& aContact);
+        int findContactIndex(std::string aSurename);
+        Contact& findContact(std::string aSurename);
         Contact& getContact(std::size_t index);
-    //void editContact()
+        //void editContact()
+        //void deleteContact()
         //void saveToFile()
         //void loadFromFile()
         //void printContact()

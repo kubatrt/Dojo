@@ -14,4 +14,11 @@ struct Contact
     string surename;
     string email;
     string pesel;
+
+    friend bool operator== (const Contact&, const Contact&);
+    friend bool operator!= (const Contact&, const Contact&);
+
+    static const int NOT_FOUND;
 };
+
+std::ostream& operator<<(std::ostream& os,const Contact& contact);
