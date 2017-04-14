@@ -24,8 +24,8 @@ class AddressBook
         int findContactIndex(std::string aSurename);
         Contact& findContact(std::string aSurename);
         Contact& getContact(std::size_t index);
-        //void editContact()
-        //void deleteContact()
+        void editContact(std::string aSurename, const Contact& newContact);
+        void deleteContact(std::string aSurename);
         //void saveToFile()
         //void loadFromFile()
         //void printContact()

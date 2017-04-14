@@ -41,3 +41,13 @@ Contact& AddressBook::findContact(std::string aSurename)
     
     return *it;
 }
+void AddressBook::editContact(std::string aSurename, const Contact& newContact)
+{
+   deleteContact(aSurename);
+   addContact(newContact);
+}
+
+void AddressBook::deleteContact(std::string aSurename)
+{
+    data.erase(data.begin() + findContactIndex(aSurename));
+}

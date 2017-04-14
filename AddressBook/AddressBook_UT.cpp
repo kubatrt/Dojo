@@ -81,3 +81,19 @@ TEST_F(AddressBookTest, findContact_NotFound)
 {
    ASSERT_THROW(book.findContact("Kowalski"), std::runtime_error); 
 }
+
+TEST_F(AddressBookTest, editContact)
+{
+    book.addContact("Jan", "Kowalski", "jank@gmail.com", "12345678901");
+    Contact newJan("Janek", "Kowalik", "jk@m.ru", "12345678902");
+    book.editContact("Kowalski", newJan); 
+    ASSERT_EQ("Kowalik", book.getContact(0).surename);
+}
+
+TEST_F(AddressBookTest, deleteContact)
+{
+    book.addContact("Jan", "Kowalski", "jank@gmail.com", "12345678901");
+    EXPECT_EQ(1, book.size());
+    book.deleteContact("Kowalski");
+    EXPECT_EQ(0, book.size());
+}
